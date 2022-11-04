@@ -4,10 +4,10 @@ from .models import Post
 # function-based views here.
 def home(request):
 
-    # posts = Post.objects.get()
+    posts = Post.objects.all()
 
-    # context = {
-    #     'posts': posts
-    # }
+    context = {
+        'posts': posts
+    }
 
-    return render(request, 'blog/home.html')
+    return render(request, 'blog/home.html', context)

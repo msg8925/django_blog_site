@@ -7,4 +7,4 @@ class Post(models.Model):
     title = models.CharField(max_length=100)
     content = models.CharField(max_length=250)
     date_posted = models.DateTimeField()
-    author = models.OneToOneField(User, on_delete=models.CASCADE)
+    author = models.ForeignKey(User, on_delete=models.CASCADE)
